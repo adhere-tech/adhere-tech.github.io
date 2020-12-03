@@ -7,36 +7,37 @@ It can also provide fix suggestions for developers to either change
 ad attributes to comply with the Better Ads Standards or remove
 the problematic ads from the page.
 
-This repository contains the source code for the AdHere implementation and the preliminary study. 
-The datasets generated are included as well.
+This repository contains the source code of AdHere, 
+the script used for the preliminary study, and the dataset. 
 
-AdHere is used to detect, classify, and give fix suggestions from a given website. 
-AdHere is only fully tested under Windows.
-
-The toolset for the preliminary study is used to get the compliance status from Google Ad Experience.
-
+AdHere is fully tested on Windows. 
+The Preliminary Study Toolset is used to get the compliance status from Google Ad Experience.
+  
 ## Dependencies
 - Python 3 (recommended >= 3.7)  
-- Python3 libraries: Selenium, lxml, wmi, pywin32
+- Python3 libraries: Selenium, lxml, wmi, pywin32, requests
 - Google Chrome (recommended >= 79) 
 - [ChromeDriver](https://chromedriver.chromium.org/), version corresponding to Chrome version and OS
 
 ## Setup Instructions
-Before deployment, please first download the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
+Before deployment, please first download 
+the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
 #### AdHere
-1. Install Python 3.7.
-2. Install Selenium with `pip install selenium`, lxml `pip install lxml`, wmi `pip install wmi`, and pywin32 `pip install pywin32`.
-3. Based on the OS and Chrome version, download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
+1. Install Python 3.
+2. Install Selenium with `pip install selenium`, lxml with `pip install lxml`, 
+wmi with `pip install wmi`, pywin32 with `pip install pywin32`, and requests with `pip install requests`.
+3. Based on the OS and Chrome version, 
+download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
 Unzip the downloaded file and put `chromedriver.exe` in the same folder of `AdHere.py`.
 4. Fill Google Chrome's user profile location after `USRPROFILE = ` in line 31 of `AdHere.py`.
 5. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
 Leaving `domain_url` blank will perform a self-inspection on google.com.
-It will scan the website with the headless (no GUI) Google Chrome. After complete the scan,
-AdHere will generate `violations.txt` in the same folder of `AdHere.py`. 
+It will scan the website with the headless (no GUI) Google Chrome. After finishing the scan,
+AdHere will generate `violations.txt` in the same folder as `AdHere.py`. 
 The text file contains violations (i.e., the id, violation type, and XPath) and their fix suggestions.
     
 #### Preliminary Study Toolset
-1. Install all dependencies.
+1. Install all [dependencies](adhere-tech.github.io#dependencies).
 2. Create at least one project using Google Ad Experience Report API in Google Developer Console. 
 3. Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
 Adjust `THREAD_COUNT` based on the comments.
