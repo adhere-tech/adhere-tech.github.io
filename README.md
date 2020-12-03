@@ -43,13 +43,13 @@ Make sure the network connection is stable.
 5) In the generated files,`[R]Alexa_done [MM_DD].csv` is the raw file before stored in the database. 
 It records the compliance status of 1 million websites.
 
-## Dataset
+## Datasets
 
-[More detailed explanations about dataset files](Data/DataInstruction.md).
+[Explanations about the datasets can be found here](Data/DataInstruction.md).
 
 ## A Glance at Results
 
-### preliminary compliance study - RQ1 Website Coverage
+### Finding 1 Website Coverage
 ![Unable to display figure1. Check browser settings.](figs/data_8.png)
 
 Among the websites being reviewed by Google, the average
@@ -63,7 +63,7 @@ consistent trend that websites for mobile contain more violating
 ads than the desktop version. However, the numbers of violating
 sites for both platforms are declining.
 
-### AdHere finding - Ad Networks
+### Finding 2 Ad Networks
 ![Unable to display table1. Check browser settings.](figs/table_3.png)
 
 The above table shows ad network statistics from 2,714 ads collected from
@@ -78,7 +78,7 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 72.7% (16 out of 22) of these networks
 are unranked and have market share much less than 0.1%.
 
-### AdHere finding - An Attribute Modification Fix Case
+### Finding 3 An Attribute Modification Fix Case
 
 The fix example happens on the mobile-version home page of "getsongbpm.com", 
 a website telling the bpm (beats per minute) of songs. 
