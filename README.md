@@ -10,8 +10,8 @@ the problematic ads from the page.
 This repository contains the source code of AdHere, 
 the script used for the preliminary study, and the dataset. 
 
-AdHere is fully tested on Windows. 
-The Preliminary Study Toolset is used to get the compliance status from Google Ad Experience.
+AdHere is fully tested on Windows 10. 
+The Preliminary Study Toolset is used to get the compliance status from Google Ad Experience Report.
   
 ## Dependencies
 - Python 3 (recommended >= 3.7)  
@@ -28,8 +28,8 @@ the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree
 wmi with `pip install wmi`, pywin32 with `pip install pywin32`, and requests with `pip install requests`.
 3. Based on the OS and Chrome version, 
 download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
-Unzip the downloaded file and put `chromedriver.exe` in the same folder of `AdHere.py`.
-4. Fill Google Chrome's user profile location after `USRPROFILE = ` in line 31 of `AdHere.py`.
+Unzip the downloaded file and put `chromedriver.exe` in the same folder as `AdHere.py`.
+4. Fill Google Chrome's user profile directory after `USRPROFILE = ` in `AdHere.py`.
 5. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
 Leaving `domain_url` blank will perform a self-inspection on google.com.
 It will scan the website with the headless (no GUI) Google Chrome. After finishing the scan,
@@ -40,11 +40,11 @@ The text file contains violations (i.e., the id, violation type, and XPath) and 
 1. Install all [dependencies](adhere-tech.github.io#dependencies).
 2. Create at least one project using Google Ad Experience Report API in Google Developer Console. 
 3. Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
-Adjust `THREAD_COUNT` based on the comments.
+Adjust `THREAD_COUNT` based on the comments in `google.py`.
 4. Run `python google.py` in the terminal to get Google Ad Experience Report's result of Alexa top 1 million websites.
 Make sure the network connection is stable.
-5. In the generated files,`[R]Alexa_done [MM_DD].csv` is the raw file before stored in the database. 
-It records the compliance status of 1 million websites.
+5. In the generated files,`[R]Alexa_done [XX_XX].csv` is the raw file to be stored in the database. 
+It records the compliance status of the 1 million websites.
 
 ## Datasets
 
@@ -81,23 +81,21 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 72.7% (16 out of 22) of these networks
 are unranked and have market share much less than 0.1%.
 
-### Finding 3. An Attribute Modification Fix Case
+### Finding 3. Fix with Attribute Modification - A Case Study
 
-The fix example happens on the mobile-version home page of "getsongbpm.com", 
-a website telling the bpm (beats per minute) of songs. 
-The following figure shows the fix process.
+The screenshot on the left shows the web page before the fix 
+and the screenshot on the right shows the page after the fix. 
+The red square on the left highlights a Pop-up Ad that blocks interactions with other elements. 
+Based on the Better Ads Standards, this Pop-up Ad is violating the standards. 
+A normal ad was used to fix the violation. 
+The green square on the right shows that the Pop-up was replaced by a normal ad. 
 
 ![Unable to display figure2. Check browser settings.](figs/merged.png)
 
-The above figure shows two screenshots. 
-Screenshot (left) displays the web page before the fix, 
-screenshot (right) shows the web page after the fix. 
-The red square shows a Pop-up ad blocking interactions with any 
-other elements on the web page, which is considered violating based on Better Ads Standards. 
-The green square shows a normal ad replacing the violating Pop-up ad.
+The code snippets of the page before and after the fix are shown below. 
+[The complete source code of the two version can be found here.](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data/fix_example).  
 
-[You can find two versions (before and after the fix) of the complete source code here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data/fix_example).  
-Code snippet of Pop-up ad (line numbers are positions in the source file, the same below):
+Code snippet of Pop-up Ad (line numbers are positions in the source file):
 ```
    1    <html><body>...
 5694    <!--ADHERE: pop-up ad starts. You can find this comment at line 5694 in file-->
@@ -119,7 +117,7 @@ Code snippet of Pop-up ad (line numbers are positions in the source file, the sa
         </body></html>
 ```
 
-Code snippet of normal ad:
+Code snippet of the normal ad:
 ```
    1    <html><body>...
 4712    <section id="content">...
