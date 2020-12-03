@@ -20,6 +20,7 @@ The Preliminary Study Toolset is used to get the compliance status from Google A
 - [ChromeDriver](https://chromedriver.chromium.org/), version corresponding to Chrome version and OS
 
 ## Setup Instructions
+
 Before deployment, please first download 
 the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
 #### AdHere
@@ -65,16 +66,16 @@ This file contains the raw data of violating ad fix time.
 
 This file contains violating ad samples found by AdHere.
 
-#### fix_example/ folder
+#### fix_example/
 
 This folder contains the source code of the fix example on "getsongbpm.com". 
-Details about this example can be found README.
+Details about this example can be found [here](adhere-tech.github.io#finding-3-fix-with-attribute-modification---a-case-study).
 
 #### top-1m.csv
 
 This is the Alexa top 1 Million Websites list.
 
-## A Glance at Results
+## Findings
 
 #### Finding 1. Website Coverage
 ![Unable to display figure1. Check browser settings.](figs/data_8.png)
