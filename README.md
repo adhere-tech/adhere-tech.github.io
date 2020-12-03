@@ -46,13 +46,37 @@ Make sure the network connection is stable.
 5. In the generated files,`[R]Alexa_done [XX_XX].csv` is the raw file to be stored in the database. 
 It records the compliance status of the 1 million websites.
 
-## Datasets
+## Dataset
 
-[Explanations about the datasets can be found here](Data/DATASET.md).
+Due to the large volume of data, this section only lists 
+a small portion of the data generated from our preliminary study and the evaluation of AdHere. 
+Specifically, [this folder](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data) contains the following: 
+
+#### Alexa_result__Sep_10_2020.csv
+
+This file contains Google Ad Experience Report’s result 
+of the top 1 million websites on September 10th, 2020.
+
+#### fix_list.csv
+
+This file contains the raw data of violating ad fix time.
+
+#### adhere-partial.csv
+
+This file contains violating ad samples found by AdHere.
+
+#### fix_example/ folder
+
+This folder contains the source code of the fix example on "getsongbpm.com". 
+Details about this example can be found README.
+
+#### top-1m.csv
+
+This is the Alexa top 1 Million Websites list.
 
 ## A Glance at Results
 
-### Finding 1. Website Coverage
+#### Finding 1. Website Coverage
 ![Unable to display figure1. Check browser settings.](figs/data_8.png)
 
 Among the websites being reviewed by Google, the average
@@ -66,7 +90,7 @@ consistent trend that mobile websites contain more violating
 ads than the desktop version. However, the numbers of violating
 sites for both platforms are declining.
 
-### Finding 2. Ad Networks
+#### Finding 2. Ad Networks
 ![Unable to display table1. Check browser settings.](figs/table_3.png)
 
 The above table shows ad network statistics from 2,714 ads collected from
@@ -81,8 +105,11 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 72.7% (16 out of 22) of these networks
 are unranked and have market share much less than 0.1%.
 
-### Finding 3. Fix with Attribute Modification - A Case Study
+#### Finding 3. Fix with Attribute Modification - A Case Study
 
+The fix example happens on the mobile website "getsongbpm.com", 
+a website telling the bpm (beats per minute) of songs. 
+The following figure shows how a violating ad was fixed.
 The screenshot on the left shows the web page before the fix 
 and the screenshot on the right shows the page after the fix. 
 The red square on the left highlights a Pop-up Ad that blocks interactions with other elements. 

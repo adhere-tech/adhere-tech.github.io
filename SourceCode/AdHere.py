@@ -85,15 +85,13 @@ def killChromeAndChromedriver_win32(onlyKillChromedriver=False):
         if not onlyKillChromedriver:
             for process in wmiHandler.Win32_Process(name="chrome.exe"):
                 process.Terminate()
-                # may generate strange bugs, caused by failing to terminate processes (because target
-                # process has been terminated earlier)
                 if ENABLE_DEBUG:
                     print('[G]chrome.exe killed')
         for process in wmiHandler.Win32_Process(name="chromedriver.exe"):
             process.Terminate()
             if ENABLE_DEBUG:
                 print('[G]chromedriver.exe killed')
-    except:  # currently just use a general exception handler to handle this, may apply a smarter solution later
+    except:
         pass
 
 
@@ -239,7 +237,7 @@ def is_displayed_using_attr(attr):
 
 
 # recursive DFS implementation
-# using is_displayed_using_attr() instead of element.is_displayed() for now
+# using is_displayed_using_attr() instead of element.is_displayed()
 def checkElement(driver, adInfo, element, platform, iframeXPATHPrefix='', depth=0):
     # introduce a simple watchdog timer to check timeout
     global watchdog_begin_timestamp
@@ -340,9 +338,6 @@ def checkElement(driver, adInfo, element, platform, iframeXPATHPrefix='', depth=
                     print(element.tag_name, element.get_attribute('outerHTML'))
             except Exception as e:
                 print(e)
-            # judge if empty or not
-            # if not empty, if there is any need to check inner content
-        # ==========================================================
     # leaf node
     if not children:
         pass
