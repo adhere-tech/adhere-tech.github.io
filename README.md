@@ -32,7 +32,8 @@ Unzip the downloaded file and put `chromedriver.exe` in the same folder of `AdHe
 5. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
 Leaving `domain_url` blank will perform a self-inspection on google.com.
 It will scan the website with the headless (no GUI) Google Chrome. After complete the scan,
-AdHere will generate `violations.txt` in the same folder of `AdHere.py`. The text file contains violations and their fix suggestions.
+AdHere will generate `violations.txt` in the same folder of `AdHere.py`. 
+The text file contains violations (i.e., the id, violation type, and XPath) and their fix suggestions.
     
 #### Preliminary Study Toolset
 1. Install all dependencies.
