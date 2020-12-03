@@ -1,7 +1,7 @@
 # AdHere
 
-AdHere is an automated framework assess the compliance with the Better Ads Standards and
-help website developers to detect, pinpoint and fix the violations.
+AdHere is an automated framework that assesses the compliance with the Better Ads Standards and
+helps website developers to detect, pinpoint and fix the violations.
 AdHere can precisely pinpoint ads on the fly and identify participating ad networks. 
 It can also provide fix suggestions for developers to either change
 ad attributes to comply with the Better Ads Standards or remove
@@ -13,7 +13,7 @@ The datasets generated are included as well.
 AdHere is used to detect, classify, and give fix suggestions from a given website. 
 AdHere is only fully tested under Windows.
 
-The toolset for the preliminary study is used to get compliance status from Google Ad Experience.
+The toolset for the preliminary study is used to get the compliance status from Google Ad Experience.
 
 ## Dependencies
 - Python 3 (recommended >= 3.7)  
@@ -24,23 +24,23 @@ The toolset for the preliminary study is used to get compliance status from Goog
 ## Setup Instructions
 Before deployment, please first download the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
 #### AdHere
-1) Install Python 3.7.
-2) Install Selenium with `pip install selenium`, lxml `pip install lxml`, wmi `pip install wmi`, and pywin32 `pip install pywin32`.
-3) Based on the OS and Chrome version, download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
+1. Install Python 3.7.
+2. Install Selenium with `pip install selenium`, lxml `pip install lxml`, wmi `pip install wmi`, and pywin32 `pip install pywin32`.
+3. Based on the OS and Chrome version, download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
 Unzip the downloaded file and put `chromedriver.exe` in the same folder of `AdHere.py`.
-4) Fill Google Chrome's user profile location after `USRPROFILE = ` in line 31 of `AdHere.py`.
-5) Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
+4. Fill Google Chrome's user profile location after `USRPROFILE = ` in line 31 of `AdHere.py`.
+5. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
 Leaving `domain_url` blank will perform a self-inspection on google.com.
 It will scan the website with the headless (no GUI) Google Chrome. After complete the scan,
 AdHere will generate `violations.txt` in the same folder of `AdHere.py`. The text file contains violations and their fix suggestions.
 #### Preliminary Study Toolset
-1) Install all dependencies.
-2) Create at least one project using Google Ad Experience Report API in Google Developer Console. 
-3) Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
+1. Install all dependencies.
+2. Create at least one project using Google Ad Experience Report API in Google Developer Console. 
+3. Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
 Adjust `THREAD_COUNT` based on the comments.
-4) Run `python google.py` in the terminal to get Google Ad Experience Report's result of Alexa top 1 million websites.
+4. Run `python google.py` in the terminal to get Google Ad Experience Report's result of Alexa top 1 million websites.
 Make sure the network connection is stable.
-5) In the generated files,`[R]Alexa_done [MM_DD].csv` is the raw file before stored in the database. 
+5. In the generated files,`[R]Alexa_done [MM_DD].csv` is the raw file before stored in the database. 
 It records the compliance status of 1 million websites.
 
 ## Datasets
@@ -49,7 +49,7 @@ It records the compliance status of 1 million websites.
 
 ## A Glance at Results
 
-### Finding 1 Website Coverage
+### Finding 1. Website Coverage
 ![Unable to display figure1. Check browser settings.](figs/data_8.png)
 
 Among the websites being reviewed by Google, the average
@@ -58,18 +58,18 @@ version is 690. Moreover, the average numbers of websites passed
 daily are 53,353 for mobile and 61,025 for desktop. The above figure shows the
 number of sites with the PASSING status and FAILING status from
 April 13, 2019 to August 18, 2019.
-In general, among those have been reviewed, we observed a
-consistent trend that websites for mobile contain more violating
+In general, among those that have been reviewed, we observed a
+consistent trend that mobile websites contain more violating
 ads than the desktop version. However, the numbers of violating
 sites for both platforms are declining.
 
-### Finding 2 Ad Networks
+### Finding 2. Ad Networks
 ![Unable to display table1. Check browser settings.](figs/table_3.png)
 
 The above table shows ad network statistics from 2,714 ads collected from
 Fail websites marked by AdHere on August 19th, 2020. 
 As can be seen, ExoClick, Google Ads, and JUICYADS were the
-most prominent ad networks presented tendency to deliver violating
+most prominent ad networks presented the tendency to deliver violating
 ads. Some ad networks fail almost exclusively on one particular
 ad type. For example, 85.2% of violating ads delivered by ExoClick
 are Ad Density Higher Than 30%, and 95.6% from JUICYADS are
@@ -78,7 +78,7 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 72.7% (16 out of 22) of these networks
 are unranked and have market share much less than 0.1%.
 
-### Finding 3 An Attribute Modification Fix Case
+### Finding 3. An Attribute Modification Fix Case
 
 The fix example happens on the mobile-version home page of "getsongbpm.com", 
 a website telling the bpm (beats per minute) of songs. 
