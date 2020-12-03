@@ -1,7 +1,7 @@
 # AdHere
 
 AdHere is an automated framework that assesses the compliance with the Better Ads Standards and
-helps website developers to detect, pinpoint and fix the violations.
+helps website developers to detect, pinpoint, and fix the violations.
 AdHere can precisely pinpoint ads on the fly and identify participating ad networks. 
 It can also provide fix suggestions for developers to either change
 ad attributes to comply with the Better Ads Standards or remove
