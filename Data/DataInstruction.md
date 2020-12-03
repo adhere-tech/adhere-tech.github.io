@@ -6,21 +6,22 @@ Due to the huge amount and size of experiment data, this folder only contains a 
 
 top-1m.csv
 --
-Alexa Top 1 Million website file.   
+This is the Alexa Top 1 Million website file for the preliminary study and AdHere.
 
 Alexa_result__Sep_10_2020.csv
 --
-An csv file containing Google Ad Experience Report's result on Sep. 10th, 2020.
+It contains Google Ad Experience Report's result on Sep. 10th, 2020.
 
 fix_list.csv
 --
-It shows the raw data for violating ads fix time.
+It shows the raw data for violating ad fix time.
+
+adhere-partial.csv
+--
+It contains some samples of the violating ads found by AdHere.
 
 fix_example folder
 --
-An example for RQ-C. You can find more details in README's corresponding section.
+The source code of a fix example. You can find more details in README's corresponding section.
 
 ### [Back to README](https://adhere-tech.github.io/)
-
-
-

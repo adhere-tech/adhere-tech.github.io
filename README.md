@@ -1,44 +1,95 @@
-About AdHere
-==
-AdHere is a systematic measurement framework for assessing websites’ compliance with 
-Better Ads Standards. We have deployed AdHere across Alexa Top 1 Million websites and conducted an over four-month study 
-to understand the violating ads in the wild and the evolution of those ads in response to the Standards.
+# AdHere
 
-Dataset
---
-[Detailed explanations about dataset files](Data/DataInstruction.md).
+AdHere is an automated framework assess the compliance with the Better Ads Standards and
+help website developers to detect, pinpoint and fix the violations.
+AdHere can precisely pinpoint ads on the fly and identify participating ad networks. 
+It can also provide fix suggestions for developers to either change
+ad attributes to comply with the Better Ads Standards or remove
+the problematic ads from the page.
 
-A Glance at Results
---
-### RQ-A  Prevalence
+This repository contains the source code for the AdHere implementation and the preliminary study. 
+The datasets generated are included as well.
+
+AdHere is used to detect, classify, and give fix suggestions from a given website. 
+AdHere is only fully tested under Windows.
+
+The toolset for the preliminary study is used to get compliance status from Google Ad Experience.
+
+## Dependencies
+- Python 3 (recommended >= 3.7)  
+- Python3 libraries: Selenium, lxml, wmi, pywin32
+- Google Chrome (recommended >= 79) 
+- [ChromeDriver](https://chromedriver.chromium.org/), version corresponding to Chrome version and OS
+
+## Setup Instructions
+Before deployment, please first download the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
+#### AdHere
+1) Install Python 3.7.
+2) Install Selenium with `pip install selenium`, lxml `pip install lxml`, wmi `pip install wmi`, and pywin32 `pip install pywin32`.
+3) Based on the OS and Chrome version, download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
+Unzip the downloaded file and put `chromedriver.exe` in the same folder of `AdHere.py`.
+4) Fill Google Chrome's user profile location after `USRPROFILE = ` in line 31 of `AdHere.py`.
+5) Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
+Leaving `domain_url` blank will perform a self-inspection on google.com.
+It will scan the website with the headless (no GUI) Google Chrome. After complete the scan,
+AdHere will generate `violations.txt` in the same folder of `AdHere.py`. The text file contains violations and their fix suggestions.
+#### Preliminary Study Toolset
+1) Install all dependencies.
+2) Create at least one project using Google Ad Experience Report API in Google Developer Console. 
+3) Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
+Adjust `THREAD_COUNT` based on the comments.
+4) Run `python google.py` in the terminal to get Google Ad Experience Report's result of Alexa top 1 million websites.
+Make sure the network connection is stable.
+5) In the generated files,`[R]Alexa_done [MM_DD].csv` is the raw file before stored in the database. 
+It records the compliance status of 1 million websites.
+
+## Dataset
+
+[More detailed explanations about dataset files](Data/DataInstruction.md).
+
+## A Glance at Results
+
+### preliminary compliance study - RQ1 Website Coverage
 ![Unable to display figure1. Check browser settings.](figs/data_8.png)
 
-The figure shows how websites changing its status during the research period. "FAILING" means Google claims the website
-containing annoying ads, "PASSING" means Google thinks the website containing no violating ads.
-We can find that the curve of FAILING websites is slowly falling down. The trend of PASSING websites
-has a flat curve.
+Among the websites being reviewed by Google, the average
+number of mobile websites failed daily is 884 while the desktop
+version is 690. Moreover, the average numbers of websites passed
+daily are 53,353 for mobile and 61,025 for desktop. The above figure shows the
+number of sites with the PASSING status and FAILING status from
+April 13, 2019 to August 18, 2019.
+In general, among those have been reviewed, we observed a
+consistent trend that websites for mobile contain more violating
+ads than the desktop version. However, the numbers of violating
+sites for both platforms are declining.
 
-### RQ-B  Ad Networks
+### AdHere finding - Ad Networks
 ![Unable to display table1. Check browser settings.](figs/table_3.png)
 
-The above table shows that in some violating ads our program automatically identified, the frequency of each ad network appears
-and how data distributed on three violating ad types and on two platforms.  
-We can find that 
-ExoClick, Google Ads, and JUICYADS are the most prominent ad networks presented tendency to deliver violating ads. 
-Developers may try not to use these adult ad networks if applicable, 
-to reduce the possibility introducing violating ads to the website. 
-Developers should also carefully configure the ads when using Google Ads 
-to avoid introducing violating ads by mistake. 
+The above table shows ad network statistics from 2,714 ads collected from
+Fail websites marked by AdHere on August 19th, 2020. 
+As can be seen, ExoClick, Google Ads, and JUICYADS were the
+most prominent ad networks presented tendency to deliver violating
+ads. Some ad networks fail almost exclusively on one particular
+ad type. For example, 85.2% of violating ads delivered by ExoClick
+are Ad Density Higher Than 30%, and 95.6% from JUICYADS are
+Large Sticky Ads. Note that these top networks delivering violating
+ads are not necessarily popular networks. According to the statistics
+provided by W3Techs, 72.7% (16 out of 22) of these networks
+are unranked and have market share much less than 0.1%.
 
-### RQ-C  Fix Practices - A Modification Fix Example
+### AdHere finding - An Attribute Modification Fix Case
 
-The fix example happens on the mobile-version home page of "getsongbpm.com", a website telling the 
-bpm (beats per minute) of songs. The following figure shows the fix process.
+The fix example happens on the mobile-version home page of "getsongbpm.com", 
+a website telling the bpm (beats per minute) of songs. 
+The following figure shows the fix process.
 
 ![Unable to display figure2. Check browser settings.](figs/merged.png)
 
-The above figure shows two screenshots. Screenshot (left) displays the web page before the fix, screenshot (right) shows 
-the web page after the fix. The red square shows an Pop-up ad blocking interactions with any 
+The above figure shows two screenshots. 
+Screenshot (left) displays the web page before the fix, 
+screenshot (right) shows the web page after the fix. 
+The red square shows a Pop-up ad blocking interactions with any 
 other elements on the web page, which is considered violating based on Better Ads Standards. 
 The green square shows a normal ad replacing the violating Pop-up ad.
 
