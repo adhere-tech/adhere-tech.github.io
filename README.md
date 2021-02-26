@@ -1,57 +1,19 @@
 # AdHere
 
-AdHere is an automated framework that assesses the compliance with the Better Ads Standards and
+AdHere is an automated framework that assesses compliance with the Better Ads Standards and
 helps website developers to detect, pinpoint, and fix the violations.
 AdHere can precisely pinpoint ads on the fly and identify participating ad networks. 
 It can also provide fix suggestions for developers to either change
 ad attributes to comply with the Better Ads Standards or remove
 the problematic ads from the page.
 
-This repository contains the source code of AdHere, 
-the script used for the preliminary study, and the dataset. 
-
-AdHere is fully tested on Windows 10. 
-The Preliminary Study Toolset is used to get the compliance status from Google Ad Experience Report.
-  
-## Dependencies
-- Python 3 (recommended >= 3.7)  
-- Python3 libraries: Selenium, lxml, wmi, pywin32, requests
-- Google Chrome (recommended >= 79) 
-- [ChromeDriver](https://chromedriver.chromium.org/), version corresponding to Chrome version and OS
-
-## Setup Instructions
-
-Before deployment, please first download 
-the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
-#### AdHere
-1. Install Python 3.
-2. Install Selenium with `pip install selenium`, lxml with `pip install lxml`, 
-wmi with `pip install wmi`, pywin32 with `pip install pywin32`, and requests with `pip install requests`.
-3. Based on the OS and Chrome version, 
-download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
-Unzip the downloaded file and put `chromedriver.exe` in the same folder as `AdHere.py`.
-4. Fill Google Chrome's user profile directory after `USRPROFILE = ` in `AdHere.py`.
-5. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
-Leaving `domain_url` blank will perform a self-inspection on google.com.
-It will scan the website with the headless (no GUI) Google Chrome. After finishing the scan,
-AdHere will generate `violations.txt` in the same folder as `AdHere.py`. 
-The text file contains violations (i.e., the id, violation type, and XPath) and their fix suggestions.
-    
-#### Preliminary Study Toolset
-1. Install all [dependencies](adhere-tech.github.io#dependencies).
-2. Create at least one project using Google Ad Experience Report API in Google Developer Console. 
-3. Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
-Adjust `THREAD_COUNT` based on the comments in `google.py`.
-4. Run `python google.py` in the terminal to get Google Ad Experience Report's result of Alexa top 1 million websites.
-Make sure the network connection is stable.
-5. In the generated files,`[R]Alexa_done [XX_XX].csv` is the raw file to be stored in the database. 
-It records the compliance status of the 1 million websites.
 
 ## Dataset
 
 Due to the large volume of data, this section only lists 
 a small portion of the data generated from our preliminary study and the evaluation of AdHere. 
-Specifically, [this folder](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data) contains the following: 
+Specifically, [this folder](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data) 
+contains the following: 
 
 #### Alexa_result__Sep_10_2020.csv
 
@@ -92,18 +54,15 @@ ads than the desktop version. However, the numbers of violating
 sites for both platforms are declining.
 
 #### Finding 2. Ad Networks
-![Unable to display table1. Check browser settings.](figs/table_3.png)
+![Unable to display table1. Check browser settings.](figs/table_4.png)
 
-The above table shows ad network statistics from 2,714 ads collected from
+The above table shows ad network statistics from 13,438 ads collected from
 Fail websites marked by AdHere on August 19th, 2020. 
 As can be seen, ExoClick, Google Ads, and JUICYADS were the
 most prominent ad networks presented the tendency to deliver violating
-ads. Some ad networks fail almost exclusively on one particular
-ad type. For example, 85.2% of violating ads delivered by ExoClick
-are Ad Density Higher Than 30%, and 95.6% from JUICYADS are
-Large Sticky Ads. Note that these top networks delivering violating
+ads. Note that these top networks delivering violating
 ads are not necessarily popular networks. According to the statistics
-provided by W3Techs, 72.7% (16 out of 22) of these networks
+provided by W3Techs, 71.4% (15 out of 21) of these networks
 are unranked and have market share much less than 0.1%.
 
 #### Finding 3. Fix with Attribute Modification - A Case Study
