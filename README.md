@@ -80,7 +80,7 @@ The green square on the right shows that the Pop-up was replaced by a normal ad.
 ![Unable to display figure2. Check browser settings.](figs/merged.png)
 
 The code snippets of the page before and after the fix are shown below. 
-[The complete source code of the two version can be found here.](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data/fix_example).  
+[The complete source code of the two version can be found here.](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data/fix_example)  
 
 Code snippet of Pop-up Ad (line numbers are positions in the source file):
 ```
