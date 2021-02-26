@@ -35,7 +35,7 @@ Details about this example can be found [here](adhere-tech.github.io#finding-3-f
 
 #### top-1m.csv
 
-This is the Alexa top 1 Million Websites list.
+This is the Alexa Top 1 Million Websites list.
 
 ## Findings
 
