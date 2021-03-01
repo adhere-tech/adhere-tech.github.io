@@ -26,13 +26,13 @@ This file contains the raw data of violating ad fix time.
 This file contains violating ad samples found by AdHere.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=911669432&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
-#### fix_example
-This file contains the source code of the fix example on "getsongbpm.com". 
-Details about this example can be found [in Finding 3](#finding-3-fix-with-attribute-modification---a-case-study).
-
 #### top-1m.csv
 This is the samples of Alexa Top 1 Million Websites list.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2070170508&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
+
+#### fix_example
+This file contains the source code of the fix example on "getsongbpm.com". 
+Details about this example can be found [in Finding 3](#finding-3-fix-with-attribute-modification---a-case-study).
 
 ## Findings
 
