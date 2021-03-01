@@ -62,7 +62,7 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 71.4% (15 out of 21) of these networks
 are unranked and have market share much less than 0.1%.
 
-<span id=”finding3”>
+<span id=”finding3”></span>
 #### Finding 3. Fix with Attribute Modification - A Case Study
 
 The fix example happens on the mobile website "getsongbpm.com", 
