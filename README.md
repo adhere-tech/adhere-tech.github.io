@@ -16,23 +16,23 @@ a small portion of the data generated from our preliminary study and the evaluat
 #### Alexa_result__Sep_10_2020.csv
 This file contains Google Ad Experience Report’s result samples
 of the Alexa Top 1 Million Websites collected on September 10th, 2020.
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2041000367&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2041000367&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
 #### fix_list.csv
 This file contains the raw data of violating ad fix time.
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1068233299&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1068233299&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
 #### adhere-partial.csv
 This file contains violating ad samples found by AdHere.
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=911669432&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=911669432&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
 #### fix_example
 This file contains the source code of the fix example on "getsongbpm.com". 
-Details about this example can be found [in Finding 3](adhere-tech.github.io#finding-3-fix-with-attribute-modification---a-case-study).
+Details about this example can be found [in Finding 3](#finding3).
 
 #### top-1m.csv
 This is the samples of Alexa Top 1 Million Websites list.
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2070170508&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2070170508&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
 ## Findings
 
@@ -62,6 +62,7 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 71.4% (15 out of 21) of these networks
 are unranked and have market share much less than 0.1%.
 
+<span id=”finding3”>
 #### Finding 3. Fix with Attribute Modification - A Case Study
 
 The fix example happens on the mobile website "getsongbpm.com", 
@@ -76,8 +77,7 @@ The green square on the right shows that the Pop-up was replaced by a normal ad.
 
 ![Unable to display figure2. Check browser settings.](figs/merged.png)
 
-The code snippets of the page before and after the fix are shown below. 
-[The complete source code of the two version can be found here.](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data/fix_example)  
+The code snippets of the page before and after the fix are shown below.
 
 Code snippet of Pop-up Ad (line numbers are positions in the source file):
 ```html
