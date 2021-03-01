@@ -11,31 +11,28 @@ the problematic ads from the page.
 ## Dataset
 
 Due to the large volume of data, this section only lists 
-a small portion of the data generated from our preliminary study and the evaluation of AdHere. 
-Specifically, [this folder](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data) 
-contains the following: 
+a small portion of the data generated from our preliminary study and the evaluation of AdHere.
 
 #### Alexa_result__Sep_10_2020.csv
-
-This file contains Google Ad Experience Report’s result 
-of the top 1 million websites on September 10th, 2020.
+This file contains Google Ad Experience Report’s result samples
+of the Alexa Top 1 Million Websites collected on September 10th, 2020.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2041000367&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 #### fix_list.csv
-
 This file contains the raw data of violating ad fix time.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1068233299&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 #### adhere-partial.csv
-
 This file contains violating ad samples found by AdHere.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=911669432&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
-#### fix_example/
-
-This folder contains the source code of the fix example on "getsongbpm.com". 
-Details about this example can be found [here](adhere-tech.github.io#finding-3-fix-with-attribute-modification---a-case-study).
+#### fix_example
+This file contains the source code of the fix example on "getsongbpm.com". 
+Details about this example can be found [in Finding 3](adhere-tech.github.io#finding-3-fix-with-attribute-modification---a-case-study).
 
 #### top-1m.csv
-
-This is the Alexa Top 1 Million Websites list.
+This is the samples of Alexa Top 1 Million Websites list.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2070170508&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 ## Findings
 
@@ -83,7 +80,7 @@ The code snippets of the page before and after the fix are shown below.
 [The complete source code of the two version can be found here.](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/Data/fix_example)  
 
 Code snippet of Pop-up Ad (line numbers are positions in the source file):
-```
+```html
    1    <html><body>...
 5694    <!--ADHERE: pop-up ad starts. You can find this comment at line 5694 in file-->
 5695    <div id="aic-root-container-250">...
@@ -105,7 +102,7 @@ Code snippet of Pop-up Ad (line numbers are positions in the source file):
 ```
 
 Code snippet of the normal ad:
-```
+```html
    1    <html><body>...
 4712    <section id="content">...
 4752        <div class="container"><div>...
