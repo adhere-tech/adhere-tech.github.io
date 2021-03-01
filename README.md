@@ -13,7 +13,7 @@ the problematic ads from the page.
 Due to the large volume of data, this section only lists 
 a small portion of the data generated from our preliminary study and the evaluation of AdHere.
 
-#### Alexa_result__Sep_10_2020.csv
+#### Alexa-result_Sep_10_2020.csv
 This file contains Google Ad Experience Report’s result samples
 of the Alexa Top 1 Million Websites collected on September 10th, 2020.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2041000367&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
@@ -22,11 +22,11 @@ of the Alexa Top 1 Million Websites collected on September 10th, 2020.
 This file contains the raw data of violating ad fix time.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1068233299&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
-#### adhere-partial.csv
+#### adhere_partial.csv
 This file contains violating ad samples found by AdHere.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=911669432&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
-#### top-1m.csv
+#### top_1m.csv
 This is the samples of Alexa Top 1 Million Websites list.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=2070170508&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
