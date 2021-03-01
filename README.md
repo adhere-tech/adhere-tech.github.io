@@ -28,7 +28,7 @@ This file contains violating ad samples found by AdHere.
 
 #### fix_example
 This file contains the source code of the fix example on "getsongbpm.com". 
-Details about this example can be found [in Finding 3](#finding3).
+Details about this example can be found [in Finding 3](#finding-3-fix-with-attribute-modification---a-case-study).
 
 #### top-1m.csv
 This is the samples of Alexa Top 1 Million Websites list.
@@ -62,7 +62,6 @@ ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 71.4% (15 out of 21) of these networks
 are unranked and have market share much less than 0.1%.
 
-<span id=”finding3”></span>
 #### Finding 3. Fix with Attribute Modification - A Case Study
 
 The fix example happens on the mobile website "getsongbpm.com", 
