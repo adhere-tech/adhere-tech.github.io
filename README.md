@@ -167,12 +167,11 @@ Code snippet of the normal ad:
         </section></body></html>
 ```
 
+------
+
+The following is the extended Related Work section by including discussions on more related works and including the papers suggested by the reviewers.
 
 ## Related
-
-This is the extended Related Work section by including discussions on more related works 
-and including the papers suggested by the reviewers.
-
 
 ### Online Ad Experiences. 
 Much research effort has been made to study the impact of advertisements on website performance and quality of web experience [7,8,11–13,25,27]. However, these works do not focus on intrusive ads and the compliance with the Better Ads Standards. Prior works have proposed systems for delivering online advertisements to users. [3] presents a platform where users can configure their own adaptive profiles with personal preferences. Ads are tailored for the individual to create a more enjoyable user experience. [8,25] conducted studies that measure impact of advertisements and other contributing factors on the performance of webpages. A study [12] of 21 Android Apps concluded that in-app advertisements depletes significantly more computational resources,network bandwidth, and energy. A subsequent evaluation [13] identified the most prominent ad-related complaints from user reviews. Adjust [27] offers web developers the ability to impose resource constraints on third-party ad events to enhance user experience. [7] analyzed existing state of the art metrics for assessing web users quality of experience, and provide two new metrics to enhanced insight on the topic. [11] examined the relationship between ad exposure and the likelihood of a user remembering it. [18] designed a novel automated approach for repairing mobile friendly problems in web pages. [6] investigated explanations for the effectiveness of one of various video ad-choice formats, advertisement choice, and potential variations of this format.
