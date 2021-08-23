@@ -13,37 +13,36 @@ The Preliminary Study Toolset is used to get the compliance status from Google A
 
 ## Dependencies
 - Python 3 (recommended >= 3.7)  
-- Python3 libraries: Selenium, lxml, wmi, pywin32, requests
-- Google Chrome (recommended >= 79) 
+- Python 3 libraries: Selenium, lxml, wmi, pywin32, requests
+- Google Chrome (recommended version >= 79) 
 - [ChromeDriver](https://chromedriver.chromium.org/): Version corresponding to Chrome version and OS
 
 ## Setup Instructions
 
-Before deployment, please first download 
+Please first download 
 the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
 #### AdHere
-1. Install Python 3.
-2. Install Selenium with `pip install selenium`, lxml with `pip install lxml`, 
-wmi with `pip install wmi`, pywin32 with `pip install pywin32`, and requests with `pip install requests`.
-3. Based on the OS and Chrome version, 
-download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
-Unzip the downloaded file and put `chromedriver.exe` in the same folder as `AdHere.py`.
-4. Fill Google Chrome's user profile directory after `USRPROFILE = ` in `AdHere.py`.
-5. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
-Leaving `domain_url` blank will perform a self-inspection on google.com.
-It will scan the website with the headless (no GUI) Google Chrome. After finishing the scan,
-AdHere will generate `violations.txt` in the same folder as `AdHere.py`. 
-The text file contains violations (i.e., the id, violation type, and XPath) and their fix suggestions.
+1. Install Python 3 and all dependencies.
+2. Based on the OS and Chrome version, 
+   download the corresponding version of Chromedriver [here](https://chromedriver.chromium.org/). 
+   Unzip the downloaded file and put `chromedriver.exe` in the same folder as `AdHere.py`.
+3. Fill Google Chrome's user profile directory after `USRPROFILE = ` in `AdHere.py`.
+4. Run `python AdHere.py domain_url` in the command line to run AdHere on the given URL. 
+   Leaving `domain_url` blank will perform a self-inspection on google.com. 
+   It will scan the website with the headless (no GUI) Google Chrome. After finishing the scan, 
+   AdHere will generate `violations.txt` in the same folder as `AdHere.py`. 
+   The text file contains violations (i.e., the id, violation type, and XPath) and their fix suggestions.
     
 #### Preliminary Study Toolset
-1. Install all [dependencies](adhere-tech.github.io#dependencies).
+1. Install Python 3 and all [dependencies](adhere-tech.github.io#dependencies).
 2. Create at least one project using Google Ad Experience Report API in Google Developer Console. 
-3. Apply for the API key for each project. Fill them in `API_KEY_LIST` in `google.py`. 
-Adjust `THREAD_COUNT` based on the comments in `google.py`.
-4. Run `python google.py` in the terminal to get Google Ad Experience Report's result of Alexa top 1 million websites.
-Make sure the network connection is stable.
+   Apply for the API key for each project.
+3. Fill API key(s) in `API_KEY_LIST` in `google.py`. 
+   Adjust `THREAD_COUNT` based on the comments in `google.py`.
+4. Run `python google.py` in the terminal to get Google Ad Experience Report's result on the Alexa Top 1 Million Websites. 
+   Try to keep the network connection stable.
 5. In the generated files,`[R]Alexa_done [XX_XX].csv` is the raw file to be stored in the database. 
-It records the compliance status of the 1 million websites.
+   It records the compliance status of the 1 million websites.
 
 
 ## Dataset
@@ -73,6 +72,9 @@ This is the samples of Alexa Top 1 Million Websites list.
 This file contains the source code of the fix example on "getsongbpm.com". 
 Details about this example can be found [in Finding 3](#finding-3-fix-with-attribute-modification---a-case-study).
 
+#### manual_inspection.xlsx
+This file contains the manual inspection result on 1,000 websites. It shows the performance of AdHere and Google
+for each combination of platform and Google status.
 
 ## Findings
 
@@ -111,8 +113,8 @@ The screenshot on the left shows the web page before the fix
 and the screenshot on the right shows the page after the fix. 
 The red square on the left highlights a Pop-up Ad that blocks interactions with other elements. 
 Based on the Better Ads Standards, this Pop-up Ad is violating the standards. 
-A normal ad was used to fix the violation. 
-The green square on the right shows that the Pop-up was replaced by a normal ad. 
+A non-violating ad was used to fix the violation. 
+The green square on the right shows that the Pop-up was replaced by a non-violating ad. 
 
 ![Unable to display figure2. Check browser settings.](figs/merged.png)
 
@@ -140,7 +142,7 @@ Code snippet of Pop-up Ad (line numbers are positions in the source file):
         </body></html>
 ```
 
-Code snippet of the normal ad:
+Code snippet of the non-violating ad:
 ```html
    1    <html><body>...
 4712    <section id="content">...
@@ -167,11 +169,10 @@ Code snippet of the normal ad:
         </section></body></html>
 ```
 
-
+<!--
 ## Related
 
-This is the extended Related Work section by including discussions on more related works 
-and including the papers suggested by the reviewers.
+This is the extended Related Work section by including discussions on more related works.
 
 
 ### Online Ad Experiences. 
@@ -246,3 +247,5 @@ REFERENCES
 [29] Weihang Wang, Yunhui Zheng, Xinyu Xing, Yonghwi Kwon, Xiangyu Zhang, and Patrick Eugster. 2016. Webranz: web page randomization for better advertisement delivery and web-bot prevention. In Proceedings of the 2016 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering. ACM, 205–216.
 
 [30] Apostolis Zarras, Alexandros Kapravelos, Gianluca Stringhini, Thorsten Holz, Christopher Kruegel, and Giovanni Vigna. 2014. The dark alleys of madison avenue: Understanding malicious advertisements. In Proceedings of the 2014 Conference on Internet Measurement Conference. ACM, 373–380.
+
+-->
