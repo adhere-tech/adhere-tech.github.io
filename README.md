@@ -1,11 +1,10 @@
 # AdHere
 
 AdHere is an automated framework that assesses compliance with the Better Ads Standards and
-helps website developers to detect, pinpoint, and fix the violations.
-AdHere can precisely pinpoint ads on the fly and identify participating ad networks. 
-It can also provide fix suggestions for developers to either change
-ad attributes to comply with the Better Ads Standards or remove
-the problematic ads from the page.
+helps website developers to detect and fix the violations.
+AdHere can pinpoint ads on the fly and identify participating ad networks. 
+It can also provide fix suggestions for developers and 
+assist developers in improving their fix solutions while preserving more ad revenue.
 
 This repository contains the source code of AdHere, 
 the script used for the preliminary study, and the dataset.
@@ -75,6 +74,8 @@ Details about this example can be found [in Finding 3](#finding-3-fix-with-attri
 #### manual_inspection.xlsx
 This file contains the manual inspection result on 1,000 websites. It shows the performance of AdHere and Google
 for each combination of platform and Google status.
+The sections with orange text shows the per-category data. 
+The sections with black text shows the per-website data.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1562090962&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
 ## Findings
