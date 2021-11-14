@@ -48,7 +48,8 @@ the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree
 
 Due to the large volume of data, this section only lists 
 a small portion of the data generated from our preliminary study and the evaluation of AdHere.
-Complete dataset (1.1 GB tar.gz file) can be found [here](https://drive.google.com/file/d/1lUGUj2bLEhMzKzJ-5goCx7bAqc7tN3Zc/view?usp=sharing).
+Complete dataset (1.1 GB tar.gz file) can be found [here (Google Drive)](https://drive.google.com/file/d/1lUGUj2bLEhMzKzJ-5goCx7bAqc7tN3Zc/view?usp=sharing)
+or [here (Zenodo)](https://doi.org/10.5281/zenodo.5700434).
 
 #### Alexa-result_Sep_10_2020.csv
 This file contains Google Ad Experience Report’s result samples
