@@ -98,8 +98,8 @@ sites for both platforms are declining.
 #### Finding 2. Ad Networks
 ![Unable to display table1. Check browser settings.](figs/table_4.png)
 
-The above table shows ad network statistics from 13,438 ads collected from
-Fail websites marked by AdHere on August 19th, 2020. 
+The above table shows ad network statistics from ads collected
+from AdHere-detected violating websites (on August 19th, 2020).
 As can be seen, ExoClick, Google Ads, and JUICYADS were the
 most prominent ad networks presented the tendency to deliver violating
 ads. Note that these top networks delivering violating
