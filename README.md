@@ -75,8 +75,8 @@ Details about this example can be found [in Finding 3](#finding-3-fix-with-attri
 #### manual_inspection.xlsx
 This file contains the manual inspection result on 1,000 websites. It shows the performance of AdHere and Google
 for each combination of platform and Google status.
-The sections with orange text shows the per-category data. 
-The sections with black text shows the per-website data.
+The sections with orange text show the per-category data. 
+The sections with black text show the per-website data.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1562090962&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
 
 ## Findings
@@ -85,15 +85,15 @@ The sections with black text shows the per-website data.
 ![Unable to display figure1. Check browser settings.](figs/data_8.png)
 
 Among the websites being reviewed by Google, the average
-number of mobile websites failed daily is 884 while the desktop
-version is 690. Moreover, the average numbers of websites passed
-daily are 53,353 for mobile and 61,025 for desktop. The above figure shows the
+number of mobile websites that failed daily is 884 while the desktop
+version is 690. Moreover, the average number of websites passed
+daily is 53,353 for mobile and 61,025 for desktop. The above figure shows the
 number of sites with the PASSING status and FAILING status from
-April 13, 2019 to August 18, 2019.
+April 13, 2019, to August 18, 2019.
 In general, among those that have been reviewed, we observed a
 consistent trend that mobile websites contain more violating
-ads than the desktop version. However, the numbers of violating
-sites for both platforms are declining.
+ads than the desktop version. However, the number of violating
+sites for both platforms is declining.
 
 #### Finding 2. Ad Networks
 ![Unable to display table1. Check browser settings.](figs/table_4.png)
@@ -101,11 +101,11 @@ sites for both platforms are declining.
 The above table shows ad network statistics from ads collected
 from AdHere-detected violating websites (on August 19th, 2020).
 As can be seen, ExoClick, Google Ads, and JUICYADS were the
-most prominent ad networks presented the tendency to deliver violating
+most prominent ad networks that presented the tendency to deliver violating
 ads. Note that these top networks delivering violating
 ads are not necessarily popular networks. According to the statistics
 provided by W3Techs, 71.4% (15 out of 21) of these networks
-are unranked and have market share much less than 0.1%.
+are unranked and have a market share of much less than 0.1%.
 
 #### Finding 3. Fix with Attribute Modification - A Case Study
 
