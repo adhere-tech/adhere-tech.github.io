@@ -72,12 +72,10 @@ This is the samples of Alexa Top 1 Million Websites list.
 This file contains the source code of the fix example on "getsongbpm.com". 
 Details about this example can be found [in Finding 3](#finding-3-fix-with-attribute-modification---a-case-study).
 
-#### manual_inspection.xlsx
-This file contains the manual inspection result on 1,000 websites. It shows the performance of AdHere and Google
-for each combination of platform and Google status.
-The sections with orange text show the per-category data. 
-The sections with black text show the per-website data.
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1562090962&amp;single=true&amp;widget=true&amp;headers=false" loading allowfullscreen width="100%" height="300"></iframe>
+#### Per-Category_Matrix.xlsx
+This file contains the manual inspection result on 1,000 websites. And it presents the performance of AdHere and Google Report
+for each violating category.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=322033070&single=true" loading allowfullscreen width="100%" height="400"></iframe>
 
 ## Findings
 
