@@ -72,9 +72,12 @@ This is the samples of Alexa Top 1 Million Websites list.
 This file contains the source code of the fix example on "getsongbpm.com". 
 Details about this example can be found [in Finding 3](#finding-3-fix-with-attribute-modification---a-case-study).
 
-#### Per-Category_Matrix.xlsx
-This file contains the manual inspection result on 1,000 websites. And it presents the performance of AdHere and Google Report
-for each violating category.
+#### Google_Matrix.xlsx
+This file contains the manual inspection result on 1,000 websites (mobile FAILING 250, mobile SUCCESS 250, desktop FAILING 250, desktop SUCCESS 250). "Manual Positive" column lists the ground truth number of websites with violating ads in four types. Based on which we compute the accurary/recall scores of the Google Ad Experience Report.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=1853172917&single=true" loading allowfullscreen width="100%" height="400"></iframe>
+
+#### AdHere_Matrix.xlsx
+This file contains the AdHere detection result on 1,000 websites (mobile FAILING 250, mobile SUCCESS 250, desktop FAILING 250, desktop SUCCESS 250). And it presents detailed confusion matrix data for each violating category. In the end it shows the accurary/recall scores of the AdHere tool.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGx9nPZIDXRfVwhFt4rTM_bVbWagirlg6wVuvP2bB79_0ZndvWe_ZTi_BVyWEacVhPUchVuTF4R2yr/pubhtml?gid=322033070&single=true" loading allowfullscreen width="100%" height="400"></iframe>
 
 ## Findings
