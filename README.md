@@ -23,7 +23,7 @@ We provide a virtual machine with AdHere and the preliminary study toolset insta
 
 #### Import VM
 - Have a virtual machine manager installed. Free [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) Recommended (version >= 6.1). The following section will use VirtualBox as an example.
-- Download the packed virtual machine [here](https://osf.io/s8mhw/?view_only=42a1f52903964e68836faa76f84a180f) named 'adhere-vm.z01' to 'adhere-vm.z05' and unzip it. The unzipped file should be 'adhere-vm.ova'.
+- Download the packed virtual machine [here](https://osf.io/s8mhw/?view_only=42a1f52903964e68836faa76f84a180f) named 'adhere-vm.zip', 'adhere-vm.z01' to 'adhere-vm.z04' (5 files in total) and unzip it. The unzipped file should be 'adhere-vm.ova'.
 - Toolbar: File -> Import Appliance. Keep Source as 'Local File System' and choose the VM file you just downloaded, then click Next. If you have a very limited CPU and/or RAM (not recommended), adjust the number of CPU and memory allocated. Change the base folder and Machine Base Folder, and they can be the same folder on a disk with more than 15 GB of free space. Click Import. It may take minutes to import so please wait for the progress to complete.
 
 #### Execute AdHere in VM
