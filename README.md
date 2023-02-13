@@ -18,8 +18,27 @@ The Preliminary Study Toolset is used to get the compliance status from Google A
 
 ## Setup Instructions
 
+### Virtual machine (VM)
+We provide a virtual machine with AdHere and the preliminary study toolset installed and ready to use. 
+
+#### Import VM
+- Have a virtual machine manager installed. Free [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads) Recommended (version >= 6.1). The following section will use VirtualBox as an example.
+- Download the packed virtual machine [here](https://osf.io/s8mhw/?view_only=42a1f52903964e68836faa76f84a180f) named 'adhere-vm.z01' to 'adhere-vm.z05' and unzip it. The unzipped file should be 'adhere-vm.ova'.
+- Toolbar: File -> Import Appliance. Keep Source as 'Local File System' and choose the VM file you just downloaded, then click Next. If you have a very limited CPU and/or RAM (not recommended), adjust the number of CPU and memory allocated. Change the base folder and Machine Base Folder, and they can be the same folder on a disk with more than 15 GB of free space. Click Import. It may take minutes to import so please wait for the progress to complete.
+
+#### Execute AdHere in VM
+- Choose the imported VM on VirtualBox's interface and click Start (green arrow). It should log in automatically and show the desktop.
+- The username and password: adhere
+- To run AdHere: Right-click on desktop -> Open in Terminal, type ```./adhere.sh```. AdHere will detect ads on Google.com. Once finished, you can find the result file in ~/adhere-linux/. If you want to detect another website, modify line 3 in adhere.sh and replace google.com with the domain. Please pay attention that the detection on a big website may take 5-20 minutes.
+- To run the preliminary toolset: Right-click on desktop -> Open in Terminal, type ```./google.sh```. It will detect the top 10 websites' status. Once finished, you can the result file in ~/adhere-linux/[R] XX.csv.
+
+#### Notes for reuse
+- In order to make the google.py ready to use, we provide our own API key. However, it has a very limited quota. Please change it to your own API key(s) and change line 16's value to 'top-1m.csv' if you want to try large-scale work.
+- We have disabled the automatic update of Google Chrome in VM but it is still possible that Chrome will be updated, sometimes accidentally. If you find that the version of Chrome is not 79, please uninstall it and install Google Chrome version 79 or change the chromedriver based on Chrome's current version.
+
+### From source code
 Please first download 
-the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
+the source code [here (osf.io, recommended)](https://osf.io/s8mhw/?view_only=42a1f52903964e68836faa76f84a180f) named 'adhere-adtifact.zip' or [here](https://github.com/adhere-tech/adhere-tech.github.io/tree/master/SourceCode).
 #### AdHere
 1. Install Python 3 and all dependencies.
 2. Based on the OS and Chrome version, 
@@ -48,7 +67,7 @@ the source code [here](https://github.com/adhere-tech/adhere-tech.github.io/tree
 
 Due to the large volume of data, this section only lists 
 a small portion of the data generated from our preliminary study and the evaluation of AdHere.
-Complete dataset (1.1 GB tar.gz file) can be found [here (Google Drive)](https://drive.google.com/file/d/1lUGUj2bLEhMzKzJ-5goCx7bAqc7tN3Zc/view?usp=sharing)
+Complete dataset can be found [here (osf.io)](https://osf.io/s8mhw/?view_only=42a1f52903964e68836faa76f84a180f) named 'adhere-adtifact.zip'
 or [here (Zenodo)](https://doi.org/10.5281/zenodo.5700434).
 
 #### Alexa-result_Sep_10_2020.csv
